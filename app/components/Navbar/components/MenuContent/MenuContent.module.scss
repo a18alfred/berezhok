@@ -1,0 +1,25 @@
+@import "shared/styles/variables";
+@import "shared/styles/mixins";
+
+.container {
+  position: absolute;
+  right: 0;
+  top: 3.5rem;
+  border-radius: 0.75rem;
+  width: max-content;
+  background: $bg-color;
+  overflow: hidden;
+  font-size: $text-sm;
+
+  @include shadow-lg;
+
+  @include md {
+    top: 3rem;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}

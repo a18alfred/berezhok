@@ -1,0 +1,25 @@
+@import "shared/styles/variables";
+@import "shared/styles/mixins";
+
+.wrapper {
+  @include transition;
+
+  &--scrolled {
+    @include shadow-sm;
+  }
+}
+
+.scrollContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  width: 100%;
+  gap: 1.5rem;
+  cursor: pointer;
+
+  @include md {
+    gap: 2rem;
+    padding-top: 1rem;
+  }
+}

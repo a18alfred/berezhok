@@ -1,0 +1,20 @@
+@import "shared/styles/variables";
+@import "shared/styles/mixins";
+
+.infoWrapper {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  gap: 0.5rem;
+
+  & :nth-child(even) {
+    font-weight: $font-semibold;
+  }
+}
+
+.buttonWrapper {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}

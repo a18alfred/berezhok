@@ -1,0 +1,2 @@
+export const RESULTS_PER_FETCH = 20;
+export const LOADING_SKELETONS_COUNT = 20;

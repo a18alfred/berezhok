@@ -1,0 +1,58 @@
+@import "shared/styles/variables";
+@import "shared/styles/mixins";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.checkbox {
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  color: $primary-color;
+  border: 2px solid $border-color;
+  border-radius: 4px;
+  appearance: none;
+  outline: 0;
+  cursor: pointer;
+  @include transition;
+
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 6px;
+    width: 6px;
+    height: 12px;
+    border-style: solid;
+    border-color: white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+
+  &:checked {
+    color: white;
+    border-color: $primary-color;
+    background: $primary-color;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.title {
+  font-weight: $font-normal;
+  color: $secondary-text-color;
+
+  font-size: $text-sm;
+
+  @include sm {
+    font-size: $text-base;
+  }
+}

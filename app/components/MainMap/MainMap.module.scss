@@ -1,0 +1,27 @@
+@import "../../../shared/styles/mixins";
+
+.map {
+  margin-top: -1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 220px);
+
+  @include md {
+    margin: 0;
+    height: calc(100vh - 175px);
+  }
+}
+
+.loader {
+  width: 100%;
+  @include flex-center;
+
+  height: calc(100vh - 220px);
+
+  @include md {
+    margin: 0;
+    height: calc(100vh - 170px);
+  }
+}

@@ -1,0 +1,28 @@
+@import "shared/styles/mixins";
+@import "shared/styles/variables";
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  cursor: pointer;
+
+  &__image {
+    height: 30px;
+    width: auto;
+  }
+
+  h1 {
+    font-size: $text-xl;
+    font-weight: $font-bold;
+    display: none;
+    color: $primary-color;
+    user-select: none;
+
+    @include lg {
+      display: block;
+    }
+  }
+}
+

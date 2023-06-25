@@ -1,0 +1,89 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  name           String?
+  email          String?   @unique
+  emailVerified  DateTime?
+  image          String?
+  hashedPassword String?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  favoriteIds    String[]  @db.ObjectId
+
+  accounts     Account[]
+  listings     Listing[]
+  reservations Reservation[]
+}
+
+model Account {
+  id                String  @id @default(auto()) @map("_id") @db.ObjectId
+  userId            String  @db.ObjectId
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.String
+  access_token      String? @db.String
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.String
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model BlacklistedToken {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  token String @unique
+}
+
+model Listing {
+  id                    String        @id @default(auto()) @map("_id") @db.ObjectId
+  title                 String
+  description           String
+  imageSrc              String
+  createdAt             DateTime      @default(now())
+  category              String
+  roomCount             Int
+  bathroomCount         Int
+  guestCount            Int
+  address_county        String
+  address_region        String
+  address_area          String?
+  address_city          String?
+  address_city_district String?
+  address_settlement    String?
+  address_street        String?
+  address_house         String?
+  address_block         String?
+  address_flat          String?
+  geo_lat               Float
+  geo_lon               Float
+  wifi                  Boolean       @default(false)
+  airConditioner        Boolean       @default(false)
+  userId                String        @db.ObjectId
+  price                 Int
+  user                  User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  reservations          Reservation[]
+}
+
+model Reservation {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId     String   @db.ObjectId
+  listingId  String   @db.ObjectId
+  startDate  DateTime
+  endDate    DateTime
+  totalPrice Int
+  createdAt  DateTime @default(now())
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  listing    Listing  @relation(fields: [listingId], references: [id], onDelete: Cascade)
+}

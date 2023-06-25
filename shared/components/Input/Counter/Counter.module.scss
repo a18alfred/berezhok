@@ -1,0 +1,60 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.counter__title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: $text-sm;
+
+  @include sm {
+    font-size: $text-base;
+  }
+
+  h4 {
+    font-weight: $font-medium;
+  }
+
+  p {
+    font-weight: $font-normal;
+    color: $secondary-text-color;
+  }
+}
+
+.counter__body {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.counter__btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  border: 2px solid $border-color;
+  @include flex-center;
+
+  color: $secondary-text-color;
+  cursor: pointer;
+
+  @include transition;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.counter__value {
+  width: 1.5rem;
+  text-align: center;
+  color: $secondary-text-color;
+  font-size: $text-base;
+}

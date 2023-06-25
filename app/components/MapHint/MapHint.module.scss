@@ -1,0 +1,30 @@
+@import "shared/styles/variables";
+@import "shared/styles/mixins";
+
+.wrapper {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  @include flex-center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  background-color: $primary-color;
+  cursor: pointer;
+  font-size: $text-sm;
+  font-weight: $font-semibold;
+  color: white;
+
+  @include transition;
+  transition-duration: 300ms;
+
+  @include md {
+    bottom: 3rem;
+  }
+
+  &:hover {
+    scale: 1.03;
+    @include shadow-md;
+  }
+}

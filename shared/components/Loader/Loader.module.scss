@@ -1,0 +1,6 @@
+@import "shared/styles/mixins";
+
+.wrapper {
+  width: 100%;
+  @include flex-center;
+}

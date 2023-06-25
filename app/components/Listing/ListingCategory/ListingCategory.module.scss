@@ -1,0 +1,27 @@
+@import "../../../../shared/styles/variables";
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  color: $secondary-text-color;
+}
+
+.categoryInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  h6 {
+    color: $primary-text-color;
+    font-weight: $font-semibold;
+    font-size: $text-lg;
+  }
+
+  p {
+    font-weight: $font-light;
+  }
+}
+
+

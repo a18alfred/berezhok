@@ -1,0 +1,14 @@
+@import "shared/styles/variables";
+
+.wrapper {
+  margin-top: auto;
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+
+  p {
+    color: $secondary-text-color;
+    font-size: $text-sm;
+  }
+}

@@ -1,0 +1,110 @@
+@import "../../../../shared/styles/variables";
+@import "../../../../shared/styles/mixins";
+
+
+.listingCard {
+  grid-column: span 1 / span 1;
+  cursor: pointer;
+  font-size: $text-sm;
+
+  &--faded {
+    opacity: 0.5;
+  }
+}
+
+.listingCard_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+}
+
+.listingCard_imageWrapper {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: $skeleton-color;
+}
+
+.listingCard_image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.listingCard_imageBtn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+}
+
+.listingCard_address {
+  font-weight: $font-semibold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.listingCard_dates {
+  color: $secondary-text-color;
+  font-weight: $font-normal;
+}
+
+.listingCard_priceWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 4px;
+  gap: 0.25rem;
+
+  span {
+    &:first-child {
+      font-weight: $font-semibold;
+    }
+
+    &:last-child {
+      font-weight: $font-normal;
+    }
+  }
+}
+
+.listingCard_buttonWrapper {
+  margin-top: 0.5rem;
+}
+
+.listingSkeleton_imageWrapper {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: $skeleton-color;
+}
+
+.listingSkeleton_address {
+  border-radius: 0.25rem;
+  height: 1rem;
+  width: 70%;
+  background: $skeleton-color;
+}
+
+.listingSkeleton_dates {
+  border-radius: 0.25rem;
+  height: 1rem;
+  width: 40%;
+  background: $skeleton-color;
+}
+
+.listingSkeleton_price {
+  border-radius: 0.25rem;
+  height: 1rem;
+  width: 25%;
+  background: $skeleton-color;
+  margin-top: 4px;
+}
+
+
+
+

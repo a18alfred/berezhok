@@ -1,0 +1,68 @@
+@import "shared/styles/variables";
+@import "shared/styles/mixins";
+
+.menu {
+  position: relative;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: $text-sm;
+    white-space: nowrap;
+  }
+}
+
+.menu__button {
+  display: none;
+  font-weight: $font-semibold;
+  padding: 0.75rem 1rem;
+  border-radius: 9999px;
+  cursor: pointer;
+
+  &:hover {
+    background: $bg-neutral;
+  }
+
+  @include transition;
+
+  @include md {
+    display: block;
+  }
+}
+
+.menu__burger {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  padding: 1rem;
+  border: 1px solid $border-color;
+  border-radius: 9999px;
+  cursor: pointer;
+
+  @include transition;
+
+  @include md {
+    padding: 0.25rem 0.5rem;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      @include shadow-md;
+    }
+  }
+}
+
+.menu__avatar {
+  display: none;
+
+  @include md {
+    display: flex;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,41 @@
+@import "shared/styles/variables";
+@import "shared/styles/mixins";
+
+.wrapper {
+  background: $bg-color;
+  border-radius: 0.75rem;
+  border: 1px solid $border-color;
+  overflow: hidden;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+
+  &__number {
+    font-size: $text-lg;
+    font-weight: $font-semibold;
+  }
+
+  &__text {
+    font-weight: $font-normal;
+    color: $secondary-text-color;
+  }
+}
+
+.buttonWrapper {
+  padding: 1rem;
+}
+
+.totalPrice {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $text-lg;
+  font-weight: $font-semibold;
+  padding: 1rem;
+}

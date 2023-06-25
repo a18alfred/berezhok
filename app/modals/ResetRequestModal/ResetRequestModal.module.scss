@@ -1,0 +1,22 @@
+@import "shared/styles/variables";
+@import "shared/styles/mixins";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  > p {
+    text-align: center;
+  }
+}
+
+.btnWrapper {
+  margin-top: 0.5rem;
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  color: $primary-color;
+}

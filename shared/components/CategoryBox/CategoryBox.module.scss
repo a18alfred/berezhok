@@ -1,0 +1,34 @@
+@import "shared/styles/variables";
+@import "shared/styles/mixins";
+
+.wrapper {
+  @include flex-center;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  color: $secondary-text-color;
+
+  @include transition;
+
+  &--selected {
+    color: $primary-text-color;
+    border-color: $primary-text-color;
+  }
+
+  @include md {
+    padding-bottom: 1rem;
+  }
+
+  &:hover {
+    color: $primary-text-color;
+  }
+
+  label {
+    cursor: pointer;
+    font-size: $text-sm;
+    font-weight: $font-normal;
+    white-space: nowrap;
+  }
+}

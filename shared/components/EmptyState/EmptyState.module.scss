@@ -1,0 +1,13 @@
+@import "shared/styles/mixins";
+
+.wrapper {
+  height: 60vh;
+  @include flex-center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.btn_wrapper {
+  width: 12rem;
+  margin-top: 1rem;
+}

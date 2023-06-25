@@ -1,0 +1,63 @@
+@import "../../../../shared/styles/variables";
+@import "../../../../shared/styles/mixins";
+
+.wrapper {
+  grid-column: span 4 / span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.basicInfo {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.basicInfo__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: $font-semibold;
+  font-size: $text-lg;
+
+  p {
+    cursor: pointer;
+  }
+}
+
+.amenitiesWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  & > h6 {
+    font-size: $text-lg;
+    font-weight: $font-semibold;
+    margin-bottom: 0.5rem;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.basicInfo__property {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: $text-base;
+  font-weight: $font-normal;
+  color: $secondary-text-color;
+}
+
+.propertyDescription {
+  font-size: $text-base;
+  font-weight: $font-normal;
+  color: $primary-text-color;
+  line-height: 150%;
+}

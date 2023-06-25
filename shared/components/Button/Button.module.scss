@@ -1,0 +1,100 @@
+@import "shared/styles/variables";
+@import "shared/styles/mixins";
+
+
+.button {
+  position: relative;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 48px;
+  background: $primary-color;
+  border: 2px solid $primary-color;
+  color: #FFFFFF;
+  font-size: $text-base;
+  font-weight: $font-semibold;
+  padding: 0.75rem 0;
+
+  @include flex-center;
+  @include transition;
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &--outline {
+    background: $bg-color;
+    border-color: $secondary-text-color;
+    color: $primary-text-color;
+  }
+
+  &--small {
+    font-size: $text-sm;
+    font-weight: $font-light;
+    padding: 0 0.25rem;
+    border-width: 1px;
+    height: 32px;
+  }
+
+  &--loading {
+    opacity: 0.8;
+    pointer-events: none;
+  }
+
+  &--notFull {
+    padding: 0 3rem;
+    width: max-content;
+  }
+}
+
+.button__icon {
+  position: absolute;
+  left: 1rem;
+  top: 0.7rem;
+}
+
+.heartButton {
+  position: relative;
+  cursor: pointer;
+  @include transition;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+
+.heartButton__iconOutline {
+  fill: #FFFFFF;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+}
+
+
+.heartButton__iconFill {
+  fill: $secondary-text-color;
+
+  &--selected {
+    fill: $primary-color;
+  }
+}
+
+.shareButton {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+
+  @include sm {
+    display: flex;
+  }
+}

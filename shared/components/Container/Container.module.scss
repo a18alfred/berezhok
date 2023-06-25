@@ -1,0 +1,16 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.container {
+  max-width: $website-max-width;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @include md {
+    padding: 0 2rem;
+  }
+
+  @include xxl {
+    padding: 0 5rem;
+  }
+}

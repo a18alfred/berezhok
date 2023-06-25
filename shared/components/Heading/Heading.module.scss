@@ -1,0 +1,20 @@
+@import "../../styles/variables";
+
+.heading {
+  text-align: left;
+
+  &--center {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: $text-2xl;
+    font-weight: $font-medium;
+  }
+
+  p {
+    font-weight: $font-normal;
+    color: $secondary-text-color;
+    margin-top: 0.5rem;
+  }
+}

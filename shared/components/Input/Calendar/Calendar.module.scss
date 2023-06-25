@@ -1,0 +1,38 @@
+@import "shared/styles/variables";
+@import "shared/styles/mixins";
+
+.dates_wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem 2rem 2rem;
+  gap: 1rem;
+
+  font-size: $text-sm;
+  color: $secondary-text-color;
+}
+
+.date_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date {
+  color: $primary-text-color;
+  font-weight: $font-medium;
+}
+
+.inactive_dates {
+  width: 24px;
+  height: 24px;
+  background: #F8F8F8;
+  border: 1px solid $border-color;
+  margin-right: 1rem;
+}
+
+.hint_row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: $text-xs;
+  margin-bottom: -1rem;
+}

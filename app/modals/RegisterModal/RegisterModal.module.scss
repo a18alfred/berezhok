@@ -1,0 +1,33 @@
+@import "shared/styles/variables";
+@import "shared/styles/mixins";
+
+.registerModal {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.registerModal__btnWrapper {
+  margin-top: 0.5rem;
+}
+
+.registerModal__breaker {
+  margin: 1.5rem 0;
+  border-top: 1px solid $border-color;
+}
+
+.registerModal_footer {
+  color: $secondary-text-color;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-weight: $font-normal;
+
+  span {
+    cursor: pointer;
+    @include transition;
+
+    &:hover {
+      color: $primary-text-color;
+    }
+  }
+}

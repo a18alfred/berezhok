@@ -1,0 +1,34 @@
+@import "shared/styles/variables";
+@import "shared/styles/mixins";
+
+.wrapper {
+  max-width: $screen-lg;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+
+
+  @include md {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 2.5rem;
+  }
+}
+
+.reservation {
+  order: -9999;
+  margin-bottom: 2.5rem;
+
+  @include md {
+    order: 9999;
+    grid-column: span 3 / span 3;
+  }
+}

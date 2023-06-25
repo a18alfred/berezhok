@@ -1,0 +1,14 @@
+@import "shared/styles/mixins";
+
+.wrapper {
+  padding-top: 1.5rem;
+  @include flex-center;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+}
+
+.activation_btnWrapper {
+  display: flex;
+  justify-content: center;
+}
